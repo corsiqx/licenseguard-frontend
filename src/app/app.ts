@@ -2,10 +2,11 @@ import { signal, afterNextRender, Component, ElementRef, viewChild } from '@angu
 import { RouterOutlet } from '@angular/router';
 import * as THREE from 'three';
 import { Sidebar } from './components/shared/sidebar/sidebar';
+import { Header } from './components/shared/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Sidebar],
+  imports: [RouterOutlet, Sidebar, Header],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
