@@ -16,5 +16,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/pages/custom-reports/custom-reports').then((m) => m.CustomReports),
   },
+  {
+    path: 'alle-lizenzen',
+    loadComponent: () =>
+      import('./components/pages/alle-lizenzen/alle-lizenzen').then((m) => m.AlleLizenzen),
+  },
   { path: '**', redirectTo: '' },
 ];
