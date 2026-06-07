@@ -12,16 +12,14 @@ import { Layout } from '../../../services/layout/layout';
 export class Sidebar {
   readonly layout = inject(Layout);
 
-  // Welche Navigationsgruppen aufgeklappt sind.
-  private readonly openGroups = signal(new Set<string>(['dashboard', 'lizenzen']));
+  // Nur eine Gruppe gleichzeitig offen.
+  private readonly activeGroup = signal<string | null>('dashboard');
 
   toggleGroup(key: string): void {
-    const next = new Set(this.openGroups());
-    next.has(key) ? next.delete(key) : next.add(key);
-    this.openGroups.set(next);
+    this.activeGroup.set(this.activeGroup() === key ? null : key);
   }
 
   isOpen(key: string): boolean {
-    return this.openGroups().has(key);
+    return this.activeGroup() === key;
   }
 }
