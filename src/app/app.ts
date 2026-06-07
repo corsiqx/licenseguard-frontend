@@ -1,10 +1,11 @@
 import { signal, afterNextRender, Component, ElementRef, viewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import * as THREE from 'three';
+import { Sidebar } from './components/shared/sidebar/sidebar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Sidebar],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -1,0 +1,5 @@
+/* Host als Layout-transparent: das <aside> wird so direkt zum Flex-Kind des Shells,
+   ohne dass <app-sidebar> eine eigene Box erzeugt. */
+:host {
+  display: contents;
+}

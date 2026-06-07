@@ -1,0 +1,186 @@
+<aside
+  [class.sidebar-closed]="!layout.sidebarOpen()"
+  class="fixed lg:static inset-y-0 left-0 z-50 h-screen lg:h-full w-[272px] shrink-0 transition-transform duration-300 border-r border-white/[0.06] bg-[#080b16]/95 backdrop-blur-xl"
+>
+  <div class="flex h-full flex-col gap-6 p-5">
+    <a routerLink="/" class="flex items-center gap-3 px-1 pt-1">
+      <span class="brand-logo h-11 w-11 shrink-0" role="img" aria-label="LicenseGuard"></span>
+      <span class="text-xl font-extrabold tracking-tight text-white"
+        >License<span class="text-blue-500">Guard</span></span
+      >
+    </a>
+
+    <div class="relative">
+      <span class="pointer-events-none absolute inset-y-0 left-3 flex items-center text-slate-500"
+        ><i class="fa-solid fa-magnifying-glass text-[15px]"></i
+      ></span>
+      <input
+        type="text"
+        placeholder="Suchen nach…"
+        class="w-full rounded-xl border border-white/[0.07] bg-white/[0.03] py-2.5 pl-10 pr-12 text-sm text-slate-200 placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.05] focus:ring-2 focus:ring-blue-500/20"
+      />
+      <kbd
+        class="pointer-events-none absolute inset-y-0 right-2 my-auto flex h-6 items-center rounded-md border border-white/[0.08] bg-white/[0.04] px-1.5 text-[11px] font-medium text-slate-500"
+        >⌘K</kbd
+      >
+    </div>
+
+    <nav class="-mx-1 flex-1 space-y-1 overflow-y-auto px-1">
+      <button
+        type="button"
+        (click)="toggleGroup('dashboard')"
+        [class.acc-open]="isOpen('dashboard')"
+        class="group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-300 transition hover:bg-white/[0.04] hover:text-white"
+      >
+        <i class="fa-solid fa-gauge-high fa-fw text-[15px] text-blue-400"></i
+        ><span class="flex-1 text-left">Dashboard</span
+        ><i class="chev fa-solid fa-chevron-down text-[12px] text-slate-500"></i>
+      </button>
+      <div data-panel [class.collapsed]="!isOpen('dashboard')" class="pl-2">
+        <div class="space-y-1 py-1">
+          <a
+            routerLink="/"
+            routerLinkActive="nav-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Home</span></a
+          ><a
+            routerLink="/auslastung"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Auslastung</span></a
+          ><a
+            routerLink="/audits"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Audits</span></a
+          ><a
+            routerLink="/custom-reports"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Custom Reports</span></a
+          >
+        </div>
+      </div>
+      <button
+        type="button"
+        (click)="toggleGroup('lizenzen')"
+        [class.acc-open]="isOpen('lizenzen')"
+        class="mt-1 group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-300 transition hover:bg-white/[0.04] hover:text-white"
+      >
+        <i class="fa-solid fa-key fa-fw text-[15px] text-fuchsia-400"></i
+        ><span class="flex-1 text-left">Lizenz Verwaltung</span
+        ><i class="chev fa-solid fa-chevron-down text-[12px] text-slate-500"></i>
+      </button>
+      <div data-panel [class.collapsed]="!isOpen('lizenzen')" class="pl-2">
+        <div class="space-y-1 py-1">
+          <a
+            routerLink="/alle-lizenzen"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Alle Lizenzen</span></a
+          ><a
+            routerLink="/anbieter"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Anbieter</span></a
+          ><a
+            routerLink="/zuweisungen"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Zuweisungen</span></a
+          ><a
+            routerLink="/erneuerungen"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Erneuerungen</span
+            ><span
+              class="ml-auto rounded-full bg-amber-500/15 px-1.5 py-0.5 text-[10px] font-bold text-amber-400 ring-1 ring-amber-500/25"
+              >3</span
+            ></a
+          ><a
+            routerLink="/ungenutzte-lizenzen"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Ungenutzte Lizenzen</span></a
+          ><a
+            routerLink="/kosten-budget"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Kosten & Budget</span></a
+          >
+        </div>
+      </div>
+      <button
+        type="button"
+        (click)="toggleGroup('tenant')"
+        [class.acc-open]="isOpen('tenant')"
+        class="mt-1 group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-300 transition hover:bg-white/[0.04] hover:text-white"
+      >
+        <i class="fa-solid fa-users fa-fw text-[15px] text-violet-400"></i
+        ><span class="flex-1 text-left">Tenant</span
+        ><i class="chev fa-solid fa-chevron-down text-[12px] text-slate-500"></i>
+      </button>
+      <div data-panel [class.collapsed]="!isOpen('tenant')" class="pl-2">
+        <div class="space-y-1 py-1">
+          <a
+            routerLink="/benutzer"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Benutzer</span></a
+          ><a
+            routerLink="/gruppen"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Gruppen</span></a
+          ><a
+            routerLink="/abteilungen"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Abteilungen</span></a
+          ><a
+            routerLink="/tenant-einstellungen"
+            routerLinkActive="nav-active"
+            class="nav-link flex items-center gap-3 rounded-xl px-3 py-2 pl-5 text-sm text-slate-400 transition hover:translate-x-0.5 hover:bg-white/[0.04] hover:text-slate-100"
+            ><span>Tenant-Einstellungen</span></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="space-y-2 border-t border-white/[0.06] pt-4">
+      <a
+        routerLink="/einstellungen"
+        routerLinkActive="nav-active"
+        class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-slate-400 transition hover:bg-white/[0.04] hover:text-slate-100"
+        ><i class="fa-solid fa-gear fa-fw text-[16px]"></i><span>Einstellungen</span></a
+      >
+      <div
+        class="flex items-center gap-3 rounded-xl border border-white/[0.06] bg-white/[0.03] px-3 py-2.5"
+      >
+        <div
+          class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-blue-500 to-fuchsia-500 text-sm font-bold text-white"
+        >
+          KK
+        </div>
+        <div class="min-w-0 flex-1">
+          <p class="truncate text-sm font-semibold text-white">Kilian Kersten</p>
+          <p class="truncate text-xs text-slate-400">Head Developer</p>
+        </div>
+        <button
+          type="button"
+          aria-label="Mehr"
+          class="rounded-lg px-2 py-1 text-slate-500 transition hover:bg-white/[0.06] hover:text-slate-200"
+        >
+          <i class="fa-solid fa-ellipsis-vertical text-[16px]"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<div
+  (click)="layout.close()"
+  [class.hidden]="!layout.sidebarOpen()"
+  class="fixed inset-0 z-40 bg-slate-950/70 backdrop-blur-sm lg:hidden"
+></div>
