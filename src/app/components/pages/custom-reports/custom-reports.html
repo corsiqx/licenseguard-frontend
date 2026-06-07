@@ -1,0 +1,197 @@
+<div
+  class="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+  style="animation-delay: 0.02s"
+>
+  <div>
+    <h1 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">Custom Reports</h1>
+    <p class="mt-1.5 text-sm text-slate-400">
+      Frei konfigurierbare Auswertungen mit Export für Management und Einkauf.
+    </p>
+  </div>
+  <div class="shrink-0">
+    <button
+      class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:bg-blue-500"
+    >
+      <i class="fa-solid fa-plus"></i>Neuer Report
+    </button>
+  </div>
+</div>
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.1s"
+>
+  <h2 class="text-lg font-bold text-white">Report erstellen</h2>
+  <div class="mt-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div>
+        <label class="text-xs font-semibold text-slate-400">Datenquelle</label>
+        <div class="mt-1.5">
+          <div class="relative">
+            <select
+              class="w-full cursor-pointer appearance-none rounded-lg border border-white/[0.1] bg-[#0b1020] px-3 py-2 pr-9 text-sm text-slate-200 outline-none transition focus:border-blue-500/60"
+            >
+              <option>Alle Lizenzen</option>
+              <option>Auslastung</option>
+              <option>Kosten</option>
+              <option>Zuweisungen</option></select
+            ><span
+              class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-slate-500"
+              ><i class="fa-solid fa-chevron-down text-[12px]"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label class="text-xs font-semibold text-slate-400">Zeitraum</label>
+        <div class="mt-1.5">
+          <div class="relative">
+            <select
+              class="w-full cursor-pointer appearance-none rounded-lg border border-white/[0.1] bg-[#0b1020] px-3 py-2 pr-9 text-sm text-slate-200 outline-none transition focus:border-blue-500/60"
+            >
+              <option>Letzte 30 Tage</option>
+              <option>Letztes Quartal</option>
+              <option>Dieses Jahr</option>
+              <option>Benutzerdefiniert</option></select
+            ><span
+              class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-slate-500"
+              ><i class="fa-solid fa-chevron-down text-[12px]"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label class="text-xs font-semibold text-slate-400">Gruppierung</label>
+        <div class="mt-1.5">
+          <div class="relative">
+            <select
+              class="w-full cursor-pointer appearance-none rounded-lg border border-white/[0.1] bg-[#0b1020] px-3 py-2 pr-9 text-sm text-slate-200 outline-none transition focus:border-blue-500/60"
+            >
+              <option>Anbieter</option>
+              <option>Abteilung</option>
+              <option>Benutzer</option>
+              <option>Monat</option></select
+            ><span
+              class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-slate-500"
+              ><i class="fa-solid fa-chevron-down text-[12px]"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2 text-sm text-slate-400">
+        <span>Format:</span>
+        <div class="flex flex-wrap gap-2">
+          <button
+            class="rounded-full bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm"
+          >
+            PDF</button
+          ><button
+            class="rounded-full border border-white/[0.1] bg-white/[0.03] px-3.5 py-1.5 text-xs font-semibold text-slate-300 transition hover:bg-white/[0.06] hover:text-white"
+          >
+            CSV</button
+          ><button
+            class="rounded-full border border-white/[0.1] bg-white/[0.03] px-3.5 py-1.5 text-xs font-semibold text-slate-300 transition hover:bg-white/[0.06] hover:text-white"
+          >
+            XLSX
+          </button>
+        </div>
+      </div>
+      <button
+        class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:bg-blue-500"
+      >
+        <i class="fa-solid fa-bolt"></i>Report generieren
+      </button>
+    </div>
+  </div>
+</div>
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.14s"
+>
+  <h2 class="text-lg font-bold text-white">Gespeicherte Reports</h2>
+  <div class="mt-4">
+    <div
+      class="reveal overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02]"
+      style="animation-delay: 0.1s"
+    >
+      <table class="w-full min-w-[720px] text-left">
+        <thead class="bg-white/[0.03]">
+          <tr>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Name
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Zeitraum
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Format
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Zuletzt erzeugt
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-right text-xs font-semibold text-slate-400">
+              Aktion
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">Lizenz-Übersicht Q2</td>
+            <td class="px-4 py-3 text-sm text-slate-300">Quartal</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-rose-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20"
+                >PDF</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">05.06.2026</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <button
+                class="inline-flex items-center gap-1.5 rounded-lg bg-blue-500/[0.12] px-2.5 py-1 text-xs font-medium text-blue-300 ring-1 ring-blue-500/20 transition hover:bg-blue-500/20"
+              >
+                <i class="fa-solid fa-download"></i>Download
+              </button>
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">Kosten je Abteilung</td>
+            <td class="px-4 py-3 text-sm text-slate-300">Dieses Jahr</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                >XLSX</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">01.06.2026</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <button
+                class="inline-flex items-center gap-1.5 rounded-lg bg-blue-500/[0.12] px-2.5 py-1 text-xs font-medium text-blue-300 ring-1 ring-blue-500/20 transition hover:bg-blue-500/20"
+              >
+                <i class="fa-solid fa-download"></i>Download
+              </button>
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">Ungenutzte Lizenzen</td>
+            <td class="px-4 py-3 text-sm text-slate-300">30 Tage</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-blue-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-blue-300 ring-1 ring-blue-500/20"
+                >CSV</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">28.05.2026</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <button
+                class="inline-flex items-center gap-1.5 rounded-lg bg-blue-500/[0.12] px-2.5 py-1 text-xs font-medium text-blue-300 ring-1 ring-blue-500/20 transition hover:bg-blue-500/20"
+              >
+                <i class="fa-solid fa-download"></i>Download
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
