@@ -55,5 +55,10 @@ export const routes: Routes = [
     path: 'gruppen',
     loadComponent: () => import('./components/pages/gruppen/gruppen').then((m) => m.Gruppen),
   },
+  {
+    path: 'abteilungen',
+    loadComponent: () =>
+      import('./components/pages/abteilungen/abteilungen').then((m) => m.Abteilungen),
+  },
   { path: '**', redirectTo: '' },
 ];
