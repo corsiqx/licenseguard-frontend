@@ -21,5 +21,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/pages/alle-lizenzen/alle-lizenzen').then((m) => m.AlleLizenzen),
   },
+  {
+    path: 'anbieter',
+    loadComponent: () => import('./components/pages/anbieter/anbieter').then((m) => m.Anbieter),
+  },
   { path: '**', redirectTo: '' },
 ];
