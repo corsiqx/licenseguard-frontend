@@ -30,5 +30,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/pages/zuweisungen/zuweisungen').then((m) => m.Zuweisungen),
   },
+  {
+    path: 'erneuerungen',
+    loadComponent: () =>
+      import('./components/pages/erneuerungen/erneuerungen').then((m) => m.Erneuerungen),
+  },
   { path: '**', redirectTo: '' },
 ];
