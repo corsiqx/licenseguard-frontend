@@ -60,5 +60,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/pages/abteilungen/abteilungen').then((m) => m.Abteilungen),
   },
+  {
+    path: 'tenant-einstellungen',
+    loadComponent: () =>
+      import('./components/pages/tenant-einstellungen/tenant-einstellungen').then(
+        (m) => m.TenantEinstellungen,
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
