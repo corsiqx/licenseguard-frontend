@@ -1,0 +1,169 @@
+<!-- Header -->
+<div
+  class="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+  style="animation-delay: 0.02s"
+>
+  <div>
+    <h1 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">Kosten & Budget</h1>
+    <p class="mt-1.5 text-sm text-slate-400">
+      Wohin das Lizenzbudget fließt — Soll/Ist je Anbieter.
+    </p>
+  </div>
+</div>
+
+<!-- KPI row -->
+<div class="reveal mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4" style="animation-delay: 0.06s">
+  <div class="rounded-xl border border-white/[0.08] bg-white/[0.03] p-4">
+    <p class="text-xs font-medium text-slate-400">Jahreskosten</p>
+    <p class="mt-1 text-xl font-bold tracking-tight text-white tabular-nums">312.000 €</p>
+  </div>
+  <div class="rounded-xl border border-white/[0.08] bg-white/[0.03] p-4">
+    <p class="text-xs font-medium text-slate-400">Budget</p>
+    <p class="mt-1 text-xl font-bold tracking-tight text-white tabular-nums">350.000 €</p>
+  </div>
+  <div class="rounded-xl border border-white/[0.08] bg-white/[0.03] p-4">
+    <p class="text-xs font-medium text-slate-400">Verbleibend</p>
+    <p class="mt-1 text-xl font-bold tracking-tight text-white tabular-nums">38.000 €</p>
+  </div>
+  <div class="rounded-xl border border-white/[0.08] bg-white/[0.03] p-4">
+    <p class="text-xs font-medium text-slate-400">Ø je Seat</p>
+    <p class="mt-1 text-xl font-bold tracking-tight text-white tabular-nums">243 €</p>
+  </div>
+</div>
+
+<!-- Donut chart -->
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.1s"
+>
+  <h2 class="text-lg font-bold text-white">Kosten nach Anbieter</h2>
+  <div class="mt-4 grid grid-cols-1 items-center gap-6 sm:grid-cols-2">
+    <!-- Canvas wrapper — #donutWrap and #costChart referenced from TS -->
+    <div #donutWrap class="relative mx-auto h-56 w-56">
+      <canvas #costChart></canvas>
+      <div class="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+        <span class="text-2xl font-bold text-white tabular-nums">312.000 €</span>
+        <span class="text-xs text-slate-500">Jahreskosten</span>
+      </div>
+    </div>
+    <!-- Legend -->
+    <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+      <div class="flex items-center justify-between gap-3">
+        <span class="flex items-center gap-2"
+          ><span class="h-2.5 w-2.5 rounded-full" style="background: #3b82f6"></span
+          ><span class="text-slate-300">Microsoft</span></span
+        >
+        <span class="text-slate-400 tabular-nums">120.000 €</span>
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <span class="flex items-center gap-2"
+          ><span class="h-2.5 w-2.5 rounded-full" style="background: #d946ef"></span
+          ><span class="text-slate-300">Adobe</span></span
+        >
+        <span class="text-slate-400 tabular-nums">56.000 €</span>
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <span class="flex items-center gap-2"
+          ><span class="h-2.5 w-2.5 rounded-full" style="background: #34d399"></span
+          ><span class="text-slate-300">Atlassian</span></span
+        >
+        <span class="text-slate-400 tabular-nums">42.000 €</span>
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <span class="flex items-center gap-2"
+          ><span class="h-2.5 w-2.5 rounded-full" style="background: #fbbf24"></span
+          ><span class="text-slate-300">Salesforce</span></span
+        >
+        <span class="text-slate-400 tabular-nums">38.000 €</span>
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <span class="flex items-center gap-2"
+          ><span class="h-2.5 w-2.5 rounded-full" style="background: #a78bfa"></span
+          ><span class="text-slate-300">Autodesk</span></span
+        >
+        <span class="text-slate-400 tabular-nums">30.000 €</span>
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <span class="flex items-center gap-2"
+          ><span class="h-2.5 w-2.5 rounded-full" style="background: #38bdf8"></span
+          ><span class="text-slate-300">Zoom</span></span
+        >
+        <span class="text-slate-400 tabular-nums">26.000 €</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Budget bar -->
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.14s"
+>
+  <h2 class="text-lg font-bold text-white">Budget</h2>
+  <div class="mt-4">
+    <div class="flex items-center justify-between text-sm">
+      <span class="text-slate-400">Budget-Auslastung</span>
+      <span class="font-semibold text-white tabular-nums">312.000 € / 350.000 €</span>
+    </div>
+    <div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-white/[0.08]">
+      <div
+        class="h-full rounded-full bg-gradient-to-r from-blue-500 to-fuchsia-500"
+        style="width: 89%"
+      ></div>
+    </div>
+    <p class="mt-1.5 text-xs text-slate-500">89 % ausgeschöpft · 38.000 € verbleibend</p>
+  </div>
+</div>
+
+<!-- Breakdown table -->
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.18s"
+>
+  <h2 class="text-lg font-bold text-white">Aufschlüsselung</h2>
+  <div class="mt-4 overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02]">
+    <table class="w-full min-w-[560px] text-left">
+      <thead class="bg-white/[0.03]">
+        <tr>
+          <th class="whitespace-nowrap px-4 py-3 text-xs font-semibold text-slate-400">Anbieter</th>
+          <th class="whitespace-nowrap px-4 py-3 text-xs font-semibold text-slate-400">
+            Kosten / Jahr
+          </th>
+          <th class="whitespace-nowrap px-4 py-3 text-xs font-semibold text-slate-400">Anteil</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+          <td class="px-4 py-3 text-sm text-slate-300">Microsoft</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">120.000 €</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">38,5 %</td>
+        </tr>
+        <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+          <td class="px-4 py-3 text-sm text-slate-300">Adobe</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">56.000 €</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">17,9 %</td>
+        </tr>
+        <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+          <td class="px-4 py-3 text-sm text-slate-300">Atlassian</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">42.000 €</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">13,5 %</td>
+        </tr>
+        <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+          <td class="px-4 py-3 text-sm text-slate-300">Salesforce</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">38.000 €</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">12,2 %</td>
+        </tr>
+        <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+          <td class="px-4 py-3 text-sm text-slate-300">Autodesk</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">30.000 €</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">9,6 %</td>
+        </tr>
+        <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+          <td class="px-4 py-3 text-sm text-slate-300">Zoom</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">26.000 €</td>
+          <td class="px-4 py-3 text-sm text-slate-300 tabular-nums">8,3 %</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
