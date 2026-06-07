@@ -1,0 +1,229 @@
+<div
+  class="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+  style="animation-delay: 0.02s"
+>
+  <div>
+    <h1 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">Zuweisungen</h1>
+    <p class="mt-1.5 text-sm text-slate-400">
+      Verknüpfung Benutzer ↔ Lizenz — einzeln oder als Massenaktion.
+    </p>
+  </div>
+  <div class="shrink-0">
+    <button
+      class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:bg-blue-500"
+    >
+      <i class="fa-solid fa-user-plus"></i>Zuweisen
+    </button>
+  </div>
+</div>
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.1s"
+>
+  <h2 class="text-lg font-bold text-white">Aktive Zuweisungen</h2>
+  <div class="mt-4">
+    <div
+      class="reveal overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02]"
+      style="animation-delay: 0.1s"
+    >
+      <table class="w-full min-w-[860px] text-left">
+        <thead class="bg-white/[0.03]">
+          <tr>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Benutzer
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Lizenz
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Zugewiesen am
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Status
+            </th>
+            <th
+              class="whitespace-nowrap px-4 py-3 text-right text-xs font-semibold text-slate-400"
+            ></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <div class="flex items-center gap-3">
+                <span
+                  class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-blue-500/[0.15] text-sm font-bold text-blue-300 ring-1 ring-blue-500/20"
+                  >SM</span
+                >
+                <div>
+                  <p class="font-medium text-white">Sabine Meyer</p>
+                  <p class="text-xs text-slate-500">s.meyer@contoso.de</p>
+                </div>
+              </div>
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Microsoft 365 E3</td>
+            <td class="px-4 py-3 text-sm text-slate-300">12.01.2026</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Aktiv</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <div class="inline-flex justify-end gap-2">
+                <button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-rose-500/[0.12] px-2.5 py-1 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20 transition hover:bg-rose-500/20"
+                >
+                  <i class="fa-solid fa-user-minus"></i>Entziehen</button
+                ><button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-slate-500/[0.12] px-2.5 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-500/20 transition hover:bg-slate-500/20"
+                >
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <div class="flex items-center gap-3">
+                <span
+                  class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-fuchsia-500/[0.15] text-sm font-bold text-fuchsia-300 ring-1 ring-fuchsia-500/20"
+                  >TW</span
+                >
+                <div>
+                  <p class="font-medium text-white">Tobias Weber</p>
+                  <p class="text-xs text-slate-500">t.weber@contoso.de</p>
+                </div>
+              </div>
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Adobe Creative Cloud</td>
+            <td class="px-4 py-3 text-sm text-slate-300">03.02.2026</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Aktiv</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <div class="inline-flex justify-end gap-2">
+                <button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-rose-500/[0.12] px-2.5 py-1 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20 transition hover:bg-rose-500/20"
+                >
+                  <i class="fa-solid fa-user-minus"></i>Entziehen</button
+                ><button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-slate-500/[0.12] px-2.5 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-500/20 transition hover:bg-slate-500/20"
+                >
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <div class="flex items-center gap-3">
+                <span
+                  class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-violet-500/[0.15] text-sm font-bold text-violet-300 ring-1 ring-violet-500/20"
+                  >JK</span
+                >
+                <div>
+                  <p class="font-medium text-white">Julia Koch</p>
+                  <p class="text-xs text-slate-500">j.koch@contoso.de</p>
+                </div>
+              </div>
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Salesforce Sales</td>
+            <td class="px-4 py-3 text-sm text-slate-300">21.11.2025</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Aktiv</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <div class="inline-flex justify-end gap-2">
+                <button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-rose-500/[0.12] px-2.5 py-1 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20 transition hover:bg-rose-500/20"
+                >
+                  <i class="fa-solid fa-user-minus"></i>Entziehen</button
+                ><button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-slate-500/[0.12] px-2.5 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-500/20 transition hover:bg-slate-500/20"
+                >
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <div class="flex items-center gap-3">
+                <span
+                  class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-emerald-500/[0.15] text-sm font-bold text-emerald-300 ring-1 ring-emerald-500/20"
+                  >ML</span
+                >
+                <div>
+                  <p class="font-medium text-white">Markus Lang</p>
+                  <p class="text-xs text-slate-500">m.lang@contoso.de</p>
+                </div>
+              </div>
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Zoom Business</td>
+            <td class="px-4 py-3 text-sm text-slate-300">30.03.2026</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-slate-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-slate-300 ring-1 ring-slate-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-slate-400"></span>Inaktiv</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <div class="inline-flex justify-end gap-2">
+                <button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-rose-500/[0.12] px-2.5 py-1 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20 transition hover:bg-rose-500/20"
+                >
+                  <i class="fa-solid fa-user-minus"></i>Entziehen</button
+                ><button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-slate-500/[0.12] px-2.5 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-500/20 transition hover:bg-slate-500/20"
+                >
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <div class="flex items-center gap-3">
+                <span
+                  class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-sky-500/[0.15] text-sm font-bold text-sky-300 ring-1 ring-sky-500/20"
+                  >AR</span
+                >
+                <div>
+                  <p class="font-medium text-white">Anna Roth</p>
+                  <p class="text-xs text-slate-500">a.roth@contoso.de</p>
+                </div>
+              </div>
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Atlassian Cloud</td>
+            <td class="px-4 py-3 text-sm text-slate-300">08.04.2026</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Aktiv</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <div class="inline-flex justify-end gap-2">
+                <button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-rose-500/[0.12] px-2.5 py-1 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20 transition hover:bg-rose-500/20"
+                >
+                  <i class="fa-solid fa-user-minus"></i>Entziehen</button
+                ><button
+                  class="inline-flex items-center gap-1.5 rounded-lg bg-slate-500/[0.12] px-2.5 py-1 text-xs font-medium text-slate-300 ring-1 ring-slate-500/20 transition hover:bg-slate-500/20"
+                >
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
