@@ -35,5 +35,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/pages/erneuerungen/erneuerungen').then((m) => m.Erneuerungen),
   },
+  {
+    path: 'ungenutzte-lizenzen',
+    loadComponent: () =>
+      import('./components/pages/ungenutzte-lizenzen/ungenutzte-lizenzen').then(
+        (m) => m.UngenutzteLizenzen,
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];
