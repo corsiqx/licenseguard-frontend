@@ -47,5 +47,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./components/pages/kosten-budget/kosten-budget').then((m) => m.KostenBudget),
   },
+  {
+    path: 'benutzer',
+    loadComponent: () => import('./components/pages/benutzer/benutzer').then((m) => m.Benutzer),
+  },
   { path: '**', redirectTo: '' },
 ];
