@@ -51,5 +51,9 @@ export const routes: Routes = [
     path: 'benutzer',
     loadComponent: () => import('./components/pages/benutzer/benutzer').then((m) => m.Benutzer),
   },
+  {
+    path: 'gruppen',
+    loadComponent: () => import('./components/pages/gruppen/gruppen').then((m) => m.Gruppen),
+  },
   { path: '**', redirectTo: '' },
 ];
