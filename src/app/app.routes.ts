@@ -67,5 +67,10 @@ export const routes: Routes = [
         (m) => m.TenantEinstellungen,
       ),
   },
+  {
+    path: 'einstellungen',
+    loadComponent: () =>
+      import('./components/pages/einstellungen/einstellungen').then((m) => m.Einstellungen),
+  },
   { path: '**', redirectTo: '' },
 ];
