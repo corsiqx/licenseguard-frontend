@@ -42,5 +42,10 @@ export const routes: Routes = [
         (m) => m.UngenutzteLizenzen,
       ),
   },
+  {
+    path: 'kosten-budget',
+    loadComponent: () =>
+      import('./components/pages/kosten-budget/kosten-budget').then((m) => m.KostenBudget),
+  },
   { path: '**', redirectTo: '' },
 ];
