@@ -1,0 +1,190 @@
+<div
+  class="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+  style="animation-delay: 0.02s"
+>
+  <div>
+    <h1 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">Audits</h1>
+    <p class="mt-1.5 text-sm text-slate-400">
+      Lückenloses Protokoll aller Änderungen — Nachweis für Revision und Compliance.
+    </p>
+  </div>
+  <div class="shrink-0">
+    <button
+      class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 transition hover:bg-blue-500"
+    >
+      <i class="fa-solid fa-download"></i>Export
+    </button>
+  </div>
+</div>
+<div class="reveal mt-6 flex flex-wrap gap-2" style="animation-delay: 0.05s">
+  <button class="rounded-full bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm">
+    Alle</button
+  ><button
+    class="rounded-full border border-white/[0.1] bg-white/[0.03] px-3.5 py-1.5 text-xs font-semibold text-slate-300 transition hover:bg-white/[0.06] hover:text-white"
+  >
+    Zuweisung</button
+  ><button
+    class="rounded-full border border-white/[0.1] bg-white/[0.03] px-3.5 py-1.5 text-xs font-semibold text-slate-300 transition hover:bg-white/[0.06] hover:text-white"
+  >
+    Entzug</button
+  ><button
+    class="rounded-full border border-white/[0.1] bg-white/[0.03] px-3.5 py-1.5 text-xs font-semibold text-slate-300 transition hover:bg-white/[0.06] hover:text-white"
+  >
+    System
+  </button>
+</div>
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.1s"
+>
+  <h2 class="text-lg font-bold text-white">Aktivitätsprotokoll</h2>
+  <div class="mt-4">
+    <div
+      class="reveal overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.02]"
+      style="animation-delay: 0.1s"
+    >
+      <table class="w-full min-w-[820px] text-left">
+        <thead class="bg-white/[0.03]">
+          <tr>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Zeitpunkt
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Benutzer
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Aktion
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-slate-400">
+              Ressource
+            </th>
+            <th class="whitespace-nowrap px-4 py-3 text-right text-xs font-semibold text-slate-400">
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">05.06.2026 09:14</td>
+            <td class="px-4 py-3 text-sm text-slate-300">K. Kersten</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-blue-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-blue-300 ring-1 ring-blue-500/20"
+                >Zugewiesen</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">M365 E3 → s.meyer</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>OK</span
+              >
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">05.06.2026 08:52</td>
+            <td class="px-4 py-3 text-sm text-slate-300">System</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-violet-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-violet-300 ring-1 ring-violet-500/20"
+                >Sync</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Azure AD (1.596 Benutzer)</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>OK</span
+              >
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">04.06.2026 17:03</td>
+            <td class="px-4 py-3 text-sm text-slate-300">A. Roth</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-rose-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20"
+                >Entzogen</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Adobe CC ← t.weber</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>OK</span
+              >
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">04.06.2026 14:21</td>
+            <td class="px-4 py-3 text-sm text-slate-300">K. Kersten</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-amber-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-amber-300 ring-1 ring-amber-500/20"
+                >Geändert</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Rolle: Admin → Manager</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>OK</span
+              >
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">03.06.2026 11:47</td>
+            <td class="px-4 py-3 text-sm text-slate-300">M. Lang</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-blue-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-blue-300 ring-1 ring-blue-500/20"
+                >Zugewiesen</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Zoom ← Gruppe Vertrieb</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>OK</span
+              >
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">03.06.2026 09:08</td>
+            <td class="px-4 py-3 text-sm text-slate-300">System</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-fuchsia-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-fuchsia-300 ring-1 ring-fuchsia-500/20"
+                >Reclaim</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Autodesk (12 Seats)</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>OK</span
+              >
+            </td>
+          </tr>
+          <tr class="border-t border-white/[0.06] transition hover:bg-white/[0.02]">
+            <td class="px-4 py-3 text-sm text-slate-300">02.06.2026 16:30</td>
+            <td class="px-4 py-3 text-sm text-slate-300">A. Roth</td>
+            <td class="px-4 py-3 text-sm text-slate-300">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-rose-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20"
+                >Entzogen</span
+              >
+            </td>
+            <td class="px-4 py-3 text-sm text-slate-300">Salesforce ← j.koch</td>
+            <td class="px-4 py-3 text-sm text-slate-300 text-right">
+              <span
+                class="inline-flex items-center gap-1.5 rounded-full bg-rose-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-rose-300 ring-1 ring-rose-500/20"
+                ><span class="h-1.5 w-1.5 rounded-full bg-rose-400"></span>Fehlgeschlagen</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
