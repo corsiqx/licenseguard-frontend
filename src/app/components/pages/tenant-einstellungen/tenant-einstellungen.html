@@ -1,0 +1,134 @@
+<div
+  class="reveal flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+  style="animation-delay: 0.02s"
+>
+  <div>
+    <h1 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+      Tenant-Einstellungen
+    </h1>
+    <p class="mt-1.5 text-sm text-slate-400">
+      Verbindung zum Azure-Tenant: Sync, Graph-Berechtigungen, OBO.
+    </p>
+  </div>
+</div>
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.1s"
+>
+  <h2 class="text-lg font-bold text-white">Azure-Verbindung</h2>
+  <div class="mt-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div>
+        <label class="text-xs font-semibold text-slate-400">Tenant-ID</label>
+        <div class="mt-1.5">
+          <input
+            value="4c42008e-b32d-4d7b-a113-e2d4ab854365"
+            readonly
+            class="w-full rounded-lg border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm text-slate-300 font-mono outline-none"
+          />
+        </div>
+      </div>
+      <div>
+        <label class="text-xs font-semibold text-slate-400">Backend Client-ID</label>
+        <div class="mt-1.5">
+          <input
+            value="api://7f3a…b981"
+            readonly
+            class="w-full rounded-lg border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-sm text-slate-300 font-mono outline-none"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 flex flex-wrap items-center gap-3">
+      <span
+        class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+        ><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Verbunden</span
+      ><button
+        class="inline-flex items-center gap-1.5 rounded-lg bg-blue-500/[0.12] px-2.5 py-1 text-xs font-medium text-blue-300 ring-1 ring-blue-500/20 transition hover:bg-blue-500/20"
+      >
+        <i class="fa-solid fa-plug"></i>Verbindung testen
+      </button>
+    </div>
+  </div>
+</div>
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.14s"
+>
+  <h2 class="text-lg font-bold text-white">Synchronisierung</h2>
+  <div class="mt-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-end">
+      <div>
+        <label class="text-xs font-semibold text-slate-400">Sync-Intervall</label>
+        <div class="mt-1.5">
+          <div class="relative">
+            <select
+              class="w-full cursor-pointer appearance-none rounded-lg border border-white/[0.1] bg-[#0b1020] px-3 py-2 pr-9 text-sm text-slate-200 outline-none transition focus:border-blue-500/60"
+            >
+              <option>Alle 15 Minuten</option>
+              <option>Alle 30 Minuten</option>
+              <option>Stündlich</option></select
+            ><span
+              class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-slate-500"
+              ><i class="fa-solid fa-chevron-down text-[12px]"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button
+          class="inline-flex items-center gap-1.5 rounded-lg bg-blue-500/[0.12] px-2.5 py-1 text-xs font-medium text-blue-300 ring-1 ring-blue-500/20 transition hover:bg-blue-500/20"
+        >
+          <i class="fa-solid fa-rotate"></i>Jetzt synchronisieren</button
+        ><span class="text-xs text-slate-500">Letzter Sync: vor 14 Min.</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.18s"
+>
+  <h2 class="text-lg font-bold text-white">Graph-Berechtigungen</h2>
+  <div class="mt-4">
+    <div class="flex flex-wrap gap-2">
+      <span
+        class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+        >User.Read.All</span
+      >
+      <span
+        class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+        >Directory.Read.All</span
+      >
+      <span
+        class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+        >Group.Read.All</span
+      >
+      <span
+        class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/[0.12] px-2.5 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20"
+        >Organization.Read.All</span
+      >
+    </div>
+  </div>
+</div>
+<div
+  class="reveal mt-6 rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-5 sm:p-6"
+  style="animation-delay: 0.22s"
+>
+  <h2 class="text-lg font-bold text-white">Authentifizierung</h2>
+  <div class="mt-4">
+    <div
+      class="flex items-center justify-between rounded-xl border border-white/[0.08] bg-white/[0.03] px-4 py-3"
+    >
+      <div>
+        <p class="text-sm font-medium text-white">On-Behalf-Of-Flow</p>
+        <p class="text-xs text-slate-500">Backend ruft Graph im Namen des Benutzers ab.</p>
+      </div>
+      <button
+        class="relative inline-flex h-6 w-11 items-center rounded-full bg-blue-600 transition"
+      >
+        <span class="h-5 w-5 translate-x-5 rounded-full bg-white shadow transition"></span>
+      </button>
+    </div>
+  </div>
+</div>
